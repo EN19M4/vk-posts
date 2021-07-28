@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(31, 31, 31, 0.95);
+  color:rgba(255,255,255)
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*Модальное окно
+*/
+
+.modal_bkg{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0 , 0, 0.8);
+  top: 0;
+  left: 0;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+
+}
+
+.modal_bkg.active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+.modal_wndw{
+  background-color: rgb(65, 65, 65);
+  width: 1000px;
+  border-radius: 12px;
+  transform: scale(0.1);
+  transition: 0.4s;
+  position: relative;
+  overflow:visible;
+}
+
+.modal_wndw.active{
+  transform: scale(1);
+}
+
+/*Оболочка
+*/
+.wrapper {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.overflow_true {
+overflow-y: hidden;
+}
+
+.post {
+  border-radius: 5px;
+  background-color: rgb(65, 65, 65);
+  margin: 15px 0px;
+}
+
+.postHeader {
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+
+.postHeader:hover{
+  cursor: pointer;
+}
+
+.postFooter {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+} 
+
+.brdr-btm{
+  border-bottom: 1px solid rgb(90, 90, 90);
+  width: 95%;
+  margin: 0 auto;
+}
+
+.brdr-btm-comm{
+  border-bottom: 1px solid rgb(90, 90, 90);
+  margin: 0 auto;
+}
+
+.postTxt{
+margin: 0 auto;
+padding: 0px 10px 10px;
+}
+
+.postTxt:hover{
+  cursor: pointer;
+}
+
+.postComments {
+  border-top: 1px solid rgb(90, 90, 90);
+  padding: 5px;
+}
+/* Лайки репосты и т.д
+*/ 
+.postBlock{
+  margin-left: 2%;
+}
+
+.postBlock:hover{
+  cursor: pointer;
+}
+
+.like-img{
+  width: 20px;
+}
+
+
+.comm-img{
+  width: 20px;
+}
+
+.share-img{
+  width: 20px;
+}
+
+.numPost{
+  margin-left: 10px;
+  color: rgb(146, 145, 163);
+  vertical-align: top;
+}
+
+/*Комменты
+*/
+.comms{
+width: 95%;
+align-items: center;
+justify-content: center;
+display: inline-block;
+margin-left: 10px;
+}
+
+.commHdr{
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.commText{
+  margin: 0 0 15px auto;
+  font-size: 0.8rem;
+}
+
+/*пагинация
+*/
+
+.pagination{
+  margin: 0 auto;
+  list-style: none;
+  width: 600px;
+  padding-inline-start: 0px;
+  margin-bottom: 20px;
+}
+
+.pageItem{
+  display: inline;
+  padding: 7px;
+  margin-right: 5px;
+  background-color: rgb(65, 65, 65);
+  border-radius: 2px;
+}
+
+.linkPage{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  
+}
+/*Инпут
+*/
+.input{
+  padding: 6px 0 4px 10px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 8px;
+  margin-top: 5px;
+}
+
+input::selection {
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+}
+
+.addPostInput{
+  display: block;
+  border: 1px solid #cecece;
+	background: rgb(90, 90, 90);
+	border-radius: 8px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  width: 50%;
+  color:#cecece;
+}
+
+.addPostTextArea{
+  display: block;
+  margin-bottom: 5px;
+  border: 1px solid #cecece;
+	background: rgb(90, 90, 90);
+	border-radius: 8px;
+  margin-left: 10px;
+  width: 50%;
+  resize: none;
+  color:#cecece;
+}
+
+.btnSend{
+  margin-left: 10px;
+  width: 15%;
+  padding-top: 3px;
+  background: rgb(90, 90, 90);
+  color:#cecece;
+  border-radius: 5px;
+}
+
+.delete{
+  background:transparent;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  float:right;
+  color: rgb(90, 90, 90);
+}
+
+.edit{
+  background:transparent;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  float:right;
+  color: rgb(90, 90, 90);
+}
+
+.editBtn{
+  float:right;
+  background: rgb(90, 90, 90);
+  color:#cecece;
+  border-radius: 5px;
+  font-size: 0.85em;
+}
+
+.commInp{
+  background: rgb(90, 90, 90);
+  color:#cecece; 
+  width: 90%;
+  font-size: 0.85em;
+}
